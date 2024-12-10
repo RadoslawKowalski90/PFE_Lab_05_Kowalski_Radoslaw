@@ -1,0 +1,59 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.task{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    animation: defaaultColorAnimation 1s forwards;
+    button{
+        animation: greenColorAnimation 1s forwards;
+        width: 100px;
+        text-align: center;
+        &.completion-button {
+            margin-right: 8px;
+        }
+    }
+}
+.completed-task{
+    //color: green;
+    //color: #fff;
+    animation: greenColorAnimation 1s forwards;
+    button {
+        animation: defaaultColorAnimation 1s forwards;
+        color: #28a745;
+        background-color: #f9f9f9;
+        &:hover{
+            background-color: #ddd;
+        }
+    }
+}
+
+@keyframes greenColorAnimation {
+    from {
+        background-color: #f9f9f9;
+        color: #28a745;
+    }
+    to {
+        background-color: #28a745;
+        color: #fff;
+    }
+}
+@keyframes defaultColorAnimation {
+    from {
+        background-color: #28a745;
+        color: #fff;
+    }
+    to {
+        background-color: #f9f9f9;
+        color: #28a745
+    }
+}
